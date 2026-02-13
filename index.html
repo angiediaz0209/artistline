@@ -8,15 +8,15 @@
             return s.replace(/~and~/g, '&')
           }).join('?');
           window.history.replaceState(null, null,
-            '/artistline/' + decoded + l.hash
+            l.pathname.split('/').slice(0, 2).join('/') + '/' + decoded + l.hash
           );
         }
       }(window.location))
     </script>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/artistline/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>artistline</title>
+    <title>ArtistLine</title>
   </head>
   <body>
     <div id="root"></div>
