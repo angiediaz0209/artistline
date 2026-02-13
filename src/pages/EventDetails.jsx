@@ -16,7 +16,7 @@ function EventDetails() {
   const [showQR, setShowQR] = useState(false);
   const [artistUsername, setArtistUsername] = useState('');
 
-  const permanentUrl = `${window.location.origin}/artist/${artistUsername}`;
+  const permanentUrl = `${window.location.origin}/artistline/artist/${artistUsername}`;
 
   useEffect(() => {
     if (!eventId || !currentUser) return;
@@ -392,7 +392,7 @@ function EventDetails() {
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
-                        window.open(`/kiosk/${eventId}/${queue.id}`, '_blank');
+                        window.open(`/artistline/kiosk/${eventId}/${queue.id}`, '_blank');
                       }}
                       className="py-2 px-3 bg-mint-100 text-mint-700 rounded-lg text-xs font-semibold hover:bg-mint-200 transition-colors"
                     >
@@ -401,7 +401,7 @@ function EventDetails() {
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
-                        window.open(`/display/${eventId}`, '_blank');
+                        window.open(`/artistline/display/${eventId}`, '_blank');
                       }}
                       className="py-2 px-3 bg-skyblue-100 text-skyblue-700 rounded-lg text-xs font-semibold hover:bg-skyblue-200 transition-colors"
                     >
