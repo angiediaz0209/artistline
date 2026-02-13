@@ -32,39 +32,39 @@ function App() {
       <Router basename='/artistline'>
         <Toaster position="top-center" />
         <Routes>
-          <Route path="/kiosk/:eventId" element={<Kiosk />} />
-          <Route path="/kiosk/:eventId/:queueId" element={<Kiosk />} />
-          <Route path="/event/:eventId/find" element={<FindTurn />} />
-          <Route path="/display/:eventId" element={<DisplayScreen />} />
-          <Route path="/customer/:customerId" element={<CustomerView />} />
-          <Route path="/artist/:username" element={<ArtistProfile />} />
-          <Route path="/join/:eventId" element={<ClientJoin />} />
-          <Route path="/queue/:queueId/manage" element={
+          <Route path="/artistline/kiosk/:eventId" element={<Kiosk />} />
+          <Route path="/artistline/kiosk/:eventId/:queueId" element={<Kiosk />} />
+          <Route path="/artistline/event/:eventId/find" element={<FindTurn />} />
+          <Route path="/artistline/display/:eventId" element={<DisplayScreen />} />
+          <Route path="/artistline/customer/:customerId" element={<CustomerView />} />
+          <Route path="/artistline/artist/:username" element={<ArtistProfile />} />
+          <Route path="/artistline/join/:eventId" element={<ClientJoin />} />
+          <Route path="/artistline/queue/:queueId/manage" element={
             <ProtectedRoute>
               <ManageQueue />
             </ProtectedRoute>
           } />
-          <Route path="/event/:eventId/create-queue" element={
+          <Route path="/artistline/event/:eventId/create-queue" element={
             <ProtectedRoute>
               <CreateQueue />
             </ProtectedRoute>
         } />
-          <Route path="/event/:eventId" element={
+          <Route path="/artistline/event/:eventId" element={
             <ProtectedRoute>
               <EventDetails />
             </ProtectedRoute>
         } />
-          <Route path="/" element={
+          <Route path="/artistline/" element={
             <PublicRoute>
               <Auth />
             </PublicRoute>
           } />
-          <Route path="/dashboard" element={
+          <Route path="/artistline/dashboard" element={
             <ProtectedRoute>
               <Dashboard />
             </ProtectedRoute>
           } />
-          <Route path="/create-event" element={
+          <Route path="/artistline/create-event" element={
             <ProtectedRoute>
               <CreateEvent />
             </ProtectedRoute>
