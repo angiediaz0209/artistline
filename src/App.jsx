@@ -29,7 +29,7 @@ function PublicRoute({ children }) {
 function App() {
   return (
     <AuthProvider>
-      <Router>
+      <Router basename='/artistline'>
         <Toaster position="top-center" />
         <Routes>
           <Route path="/kiosk/:eventId" element={<Kiosk />} />
